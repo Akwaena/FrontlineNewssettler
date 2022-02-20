@@ -8,11 +8,16 @@ body {
 }
 
 footer {
-	border: 4px double black;
+	border: 4px solid black;
 	margin-top: 1%
 	background-color: rgb(61, 61, 61);
 	font-size: 80%;
 	text-align: center;
+}
+
+head {
+	border: 4px solid black;
+	margin-bottom: 1%
 }
 
 p {
