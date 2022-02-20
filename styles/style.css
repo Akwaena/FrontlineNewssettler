@@ -8,6 +8,8 @@ body {
 }
 
 footer {
+	border: 4px double black;
+	margin-top: 1%
 	background-color: rgb(61, 61, 61);
 	font-size: 80%;
 	text-align: center;
@@ -34,6 +36,10 @@ a {
 	color: rgb(200, 200, 200);
 }
 
+img {
+	width: 90%;
+	height: auto;
+}
 
 .main-page-header {
 	font-size: 400%;
