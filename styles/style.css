@@ -41,8 +41,10 @@ a {
 	color: rgb(200, 200, 200);
 }
 
-.auto-resize-image {
-	width: 70%
+img {
+	width: 70%;
+	height: auto;
+	margin-bottom: 1%;
 }
 
 .main-page-header {
