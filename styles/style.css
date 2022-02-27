@@ -41,6 +41,9 @@ a {
 	color: rgb(200, 200, 200);
 }
 
+.auto-resize-image {
+	width: 70%
+}
 
 .main-page-header {
 	font-size: 400%;
