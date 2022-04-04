@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h1>{{ title }}</h1>
+{% for issue in range(issues_num) %}
+<a href="{{ url_for('article', article_id=articles[issue].id) }}"><p>{{issue + 1}}. {{ articles[issue].meta.title }} - {{ articles[issue].meta.author }} - {{ articles[issue].meta.datetime }}</p></a>
+{% endfor %}
+{% endblock %}

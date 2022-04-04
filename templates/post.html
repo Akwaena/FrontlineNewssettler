@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h2>{{ title }}</h2>
+<form action="/post" method="post" class="form-contact">
+<p><label>Название: </label> <input type="text" name="name" value="" required />
+<p><label>Дата в игре: </label> <input type="text" name="date" value="" required />
+<p><label>Ник автора: </label> <input type="text" name="author" value="" required />
+<p><label>Уровень секретности: </label> <input type="text" name="access" value="" required />
+<p><label>Теги через запятую: </label> <input type="text" name="tags" value="" required />
+<p><label>Статья в формате html: </label> <input type="text" name="content" value="" required />
+<p><input type="submit" value="Подтвердить" />
+</form>
+{% endblock %}

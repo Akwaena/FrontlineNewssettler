@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h1>{{ title }}</h1>
+<h3>{{ date }}, {{ author }}</h3>
+{{ article | safe }}
+<a style="text-decoration: none" href="{{ url_for('article', article_id=article_id) }}/commends"><p>Похвалило статью: {{ commends }}</p></a>
+<h3>Комментарии: </h3>
+{% for comment in range(comments_number) %}
+<table width="70%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="leftcol"><img class="avatar" src="{{ url_for('static', filename=comments[comment][3]) }}"></td>
+        <td valign="top" align="left"><p>{{ comments[comment][1] }}:</p></td>
+        <td valign="top" align="left"><p>{{ comments[comment][2] }}</p></td>
+    </tr>
+</table>
+<hr width="70%">
+{% endfor %}
+{% endblock %}

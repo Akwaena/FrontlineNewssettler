@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<img class="big-avatar" width="300px" src="{{ url_for('static', filename=user_avatar_id) }}">
+<h1>{{ title }}</h1>
+<h3 style="color: {{ color }}">{{localized_access}}</h3>
+<a style="text-decoration: none" href="{{ url_for('user', user_id=user_id) }}/commends"><p>Похвал: {{ commends }}</p></a>
+{% endblock %}

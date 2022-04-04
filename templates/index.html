@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<a href="{{ url_for('issues') }}"><h2>Выпуски газеты</h2></a>
+<a href="{{ url_for('post') }}"><h2>Опубликовать статью</h2></a>
+<a href="{{ url_for('credits') }}"><h2>Авторы</h2></a>
+{% endblock %}

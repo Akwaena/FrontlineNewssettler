@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h1>{{ title }}</h1>
+<p>Всего похвал: {{ commends }}</p>
+<h3>Человека похвалили: </h3>
+{% for commend in range(commends) %}
+<table align="center" width="70%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="centercol"><img class="avatar" src="{{ url_for('static', filename=commends_list[commend][2]) }}"></td>
+        <td valign="top" align="left"><p>{{ commends_list[commend][1] }}</p></td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
