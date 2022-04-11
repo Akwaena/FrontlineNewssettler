@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h2>{{ title }}</h2>
+<form method="post" class="form-contact">
+<p><label>Никнейм: </label> <input type="text" name="name" value="" required />
+<p><label>Пароль: </label> <input type="password" name="pass" value="" required />
+<p><input type="submit" value="Подтвердить" />
+</form>
+{% endblock %}
+0

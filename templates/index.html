@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<a href="{{ url_for('issues') }}"><h2>Выпуски газеты</h2></a>
+<a href="{{ url_for('credits') }}"><h2>Авторы</h2></a>
+{% if not is_auth: %}
+<a href="{{ url_for('sign_in') }}"><h2>Войти</h2></a>
+<a href="{{ url_for('sign_up') }}"><h2>Регистрация</h2></a>
+{% endif %}
+{% if is_journo: %}
+<a href="{{ url_for('post') }}"><h2>Опубликовать статью</h2></a>
+{% endif %}
+{% if is_auth: %}
+<a href="{{ url_for('sign_out') }}"><h2>Выйти</h2></a>
+{% endif %}
+{% endblock %}
